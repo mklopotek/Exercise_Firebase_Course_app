@@ -1,6 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-class UserRandom extends React.Component {
+class RandomUsers extends React.Component {
     state = {
         userArray: null
     }
@@ -14,6 +15,7 @@ class UserRandom extends React.Component {
     render() {
         return (
             <div>
+                <Link to={'/'}> Go to Counter! </Link>
                 {
                     this.state.userArray && this.state.userArray.map(user =>
                         <div key={user.login.uuid}>
@@ -27,4 +29,4 @@ class UserRandom extends React.Component {
     }
 }
 
-export default UserRandom
+export default RandomUsers

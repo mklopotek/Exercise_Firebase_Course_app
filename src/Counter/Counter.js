@@ -1,5 +1,6 @@
 import React from 'react'
 import { database } from '../firebaseConfig'
+import { Link } from 'react-router-dom'
 
 class Counter extends React.Component {
     state = { number: 0 }
@@ -31,6 +32,7 @@ class Counter extends React.Component {
 
         return (
             <div>
+                <Link to={'/random-users'}> Generate your random users! </Link>
                 <div>{this.state.number}</div>
 
                 <button

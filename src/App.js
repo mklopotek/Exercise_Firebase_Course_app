@@ -1,13 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import Counter from './Counter'
-import UserRandom from './UserRandom';
+import RandomUsers from './RandomUsers'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Counter />
-        <UserRandom />
+        <Router>
+          <div>
+            <Route path={'/'} exact component={Counter} />
+            <Route path={'/random-users'} exact component={RandomUsers} />
+          </div>
+        </Router>
       </div>
     );
   }
